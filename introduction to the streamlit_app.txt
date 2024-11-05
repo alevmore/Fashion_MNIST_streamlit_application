@@ -30,4 +30,6 @@ the selected model to predict the class of the uploaded image.
 The predicted class and the probability distribution across all classes are shown. A bar plot visualizes the probabilities, 
 and line charts display the loss and accuracy of the chosen model.
 This application demonstrates how deep learning models can be integrated into an interactive web interface for real-time 
-image classification and result visualization, making it accessible and user-friendly. """
+image classification and result visualization, making it accessible and user-friendly. 
+
+Technologies: Python libraries like Numpy, tensorflow, matplotlib, sklearn, keras, Pikle, and Streamlit. """
