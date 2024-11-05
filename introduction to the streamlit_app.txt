@@ -1,0 +1,33 @@
+"""
+This Python script is a Streamlit application designed to classify images from the Fashion MNIST dataset using two different 
+pre-trained models: a custom Convolutional Neural Network (CNN) and the VGG16 model. The application allows users to upload 
+an image and choose between these models for classification. Here's an overview of how the code works:
+
+Import Libraries: 
+
+The code imports essential libraries, including Streamlit for creating the web interface, PIL for image 
+processing, TensorFlow for loading and using pre-trained models, and Matplotlib for plotting graphs. The pickle module is 
+used to load the training history of the models.
+
+Model Loading:
+
+The script loads a custom CNN model from a specified file path and its training history, which includes metrics like loss 
+and accuracy. It also imports the VGG16 model from TensorFlow's Keras applications, configured to exclude the top (fully 
+connected) layers. This VGG16 model is enhanced with custom fully connected layers and then compiled for use in the 
+application. Its training history is similarly loaded using pickle.
+
+Image Classification Functions:
+
+Two separate functions are defined for image classification, one for the custom CNN and another for VGG16. Each function 
+processes an image to the required input size, normalizes the pixel values, and predicts the class probabilities.
+The CNN model expects grayscale images of size 28x28, while the VGG16 model requires RGB images resized to 224x224 pixels.
+
+Streamlit Application:
+
+The main part of the application starts with a title and a radio button selection for choosing the model.
+Users can upload an image, which is then displayed on the interface. When the "CLASSIFY" button is clicked, the script uses 
+the selected model to predict the class of the uploaded image.
+The predicted class and the probability distribution across all classes are shown. A bar plot visualizes the probabilities, 
+and line charts display the loss and accuracy of the chosen model.
+This application demonstrates how deep learning models can be integrated into an interactive web interface for real-time 
+image classification and result visualization, making it accessible and user-friendly. """
